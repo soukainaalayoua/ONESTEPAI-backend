@@ -22,8 +22,10 @@ router.post("/checkout", async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: "http://localhost:5173/payment-success?userId=${userId}",
-      cancel_url: "http://localhost:5173/payment-cancel",
+      success_url:
+        "https://onestepai-frontend-urdp.vercel.app/payment-success/payment-success?userId=${userId}",
+      cancel_url:
+        "https://onestepai-frontend-urdp.vercel.app/payment-success/payment-cancel",
     });
 
     res.status(200).json({ url: session.url });
