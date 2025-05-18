@@ -16,7 +16,8 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://onestepai-frontend-urdp.vercel.app",
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
