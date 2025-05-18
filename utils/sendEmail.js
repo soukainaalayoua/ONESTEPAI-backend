@@ -8,10 +8,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,
   },
 });
-// teste
-cron.schedule("* * * * *", async () => {
-  console.log("✅ Cron triggered");
-});
+
 async function sendEmail({ to, subject, text }) {
   console.log("✉️ sendEmail params:", { to, subject, text });
   const mailOptions = {
