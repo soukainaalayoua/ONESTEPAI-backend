@@ -33,6 +33,9 @@ app.use("/api/payment", paymentRoutes);
 app.use("/api/users", userRoutes);
 
 const PORT = process.env.PORT || 3001;
+app.get("/", (req, res) => {
+  res.send("✅ API is working");
+});
 
 connectDB()
   .then(() => {
