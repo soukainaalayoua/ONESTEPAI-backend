@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Stripe = require("stripe");
-const User = require("../models/user");
+const User = require("../models/User");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
