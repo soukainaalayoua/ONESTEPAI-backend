@@ -11,6 +11,7 @@ const goalRoutes = require("./routes/goalRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 const userRoutes = require("./routes/userRoutes");
+const postsRouter = require("./routes/community");
 
 const app = express();
 app.use(express.json());
@@ -31,6 +32,7 @@ app.use("/api/goals", goalRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api", postsRouter);
 
 const PORT = process.env.PORT || 3001;
 
